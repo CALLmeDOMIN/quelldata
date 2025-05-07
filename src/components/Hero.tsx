@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { motion } from "motion/react";
-import Navbar from "../components/Navbar";
+import { motion } from 'motion/react';
+import Navbar from '../components/Navbar';
 
 const Hero = () => {
   return (
@@ -17,25 +17,73 @@ const Hero = () => {
         <div className="absolute mx-auto h-px w-40 bg-gradient-to-r from-transparent via-blue-500 to-transparent" />
       </div>
       <div className="px-4 py-10 md:py-20">
-        <h1 className="relative z-10 mx-auto max-w-4xl text-center text-2xl font-bold text-slate-700 md:text-4xl lg:text-7xl dark:text-slate-300">
-          {"Quelldata – on-demand high-quality datasets for your AI models "
-            .split(" ")
-            .map((word, index) => (
-              <motion.span
-                key={index}
-                initial={{ opacity: 0, filter: "blur(4px)", y: 10 }}
-                animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-                transition={{
-                  duration: 0.3,
-                  delay: index * 0.1,
-                  ease: "easeInOut",
-                }}
-                className="mr-2 inline-block"
-              >
-                {word}
-              </motion.span>
-            ))}
+        <h1 className="relative hidden md:inline z-10 mx-auto max-w-4xl text-center text-2xl font-bold text-slate-700 md:text-4xl lg:text-7xl dark:text-slate-300">
+          {'Quelldata – on-demand high-quality datasets for your AI models '.split(' ').map((word, index) => (
+            <motion.span
+              key={index}
+              initial={{ opacity: 0, filter: 'blur(4px)', y: 10 }}
+              animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
+              transition={{
+                duration: 0.3,
+                delay: index * 0.1,
+                ease: 'easeInOut',
+              }}
+              className="mr-2 inline-block"
+            >
+              {word}
+            </motion.span>
+          ))}
         </h1>
+        <div className="block md:hidden relative z-10 mx-auto max-w-4xl text-center text-2xl font-bold text-slate-700  dark:text-slate-300">
+            <motion.span
+              initial={{ opacity: 0, y: 10, filter: 'blur(4px)' }}
+              animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+              transition={{ duration: 0.4, delay: 0 }}
+              className="block text-6xl"
+            >
+              Quelldata
+            </motion.span>
+            <motion.span
+              initial={{ opacity: 0, y: 10, filter: 'blur(4px)' }}
+              animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+              transition={{ duration: 0.4, delay: 0.2 }}
+              className="block mt-2 text-xl"
+            >
+              on-demand high-quality datasets for your AI models
+            </motion.span>
+          </div>
+        {/* <h1 className="relative z-10 mx-auto max-w-4xl text-center font-bold text-slate-700 dark:text-slate-300">
+  
+          <div className="block md:hidden">
+            <motion.span
+              initial={{ opacity: 0, y: 10, filter: 'blur(4px)' }}
+              animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+              transition={{ duration: 0.4, delay: 0 }}
+              className="block text-4xl"
+            >
+              Quelldata
+            </motion.span>
+            <motion.span
+              initial={{ opacity: 0, y: 10, filter: 'blur(4px)' }}
+              animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+              transition={{ duration: 0.4, delay: 0.2 }}
+              className="block mt-2 text-xl"
+            >
+              on-demand high-quality datasets for your AI models
+            </motion.span>
+          </div>
+
+          
+          <motion.span
+            initial={{ opacity: 0, y: 10, filter: 'blur(4px)' }}
+            animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+            transition={{ duration: 0.4, delay: 0 }}
+            className="hidden md:inline text-4xl md:text-6xl lg:text-7xl"
+          >
+            Quelldata – on-demand high-quality datasets for your AI models
+          </motion.span>
+        </h1> */}
+
         <motion.p
           initial={{
             opacity: 0,
@@ -49,8 +97,8 @@ const Hero = () => {
           }}
           className="relative z-10 mx-auto max-w-xl py-4 text-center text-lg font-normal text-neutral-600 dark:text-neutral-400"
         >
-          Get custom datasets sourced by a global community and validated with
-          transparency. Faster, cheaper, and tailored to your model’s needs.
+          Get custom datasets sourced by a global community and validated with transparency. Faster, cheaper, and
+          tailored to your model’s needs.
         </motion.p>
         <motion.div
           initial={{
