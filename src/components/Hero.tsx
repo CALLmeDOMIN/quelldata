@@ -39,18 +39,25 @@ const Hero = () => {
               initial={{ opacity: 0, y: 10, filter: 'blur(4px)' }}
               animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
               transition={{ duration: 0.4, delay: 0 }}
-              className="block text-6xl"
+              className="block text-6xl mb-2"
             >
               Quelldata
             </motion.span>
+            {'on-demand high-quality datasets for your AI models '.split(' ').map((word, index) => (
             <motion.span
-              initial={{ opacity: 0, y: 10, filter: 'blur(4px)' }}
-              animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-              transition={{ duration: 0.4, delay: 0.2 }}
-              className="block mt-2 text-xl"
+              key={index}
+              initial={{ opacity: 0, filter: 'blur(4px)', y: 10 }}
+              animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
+              transition={{
+                duration: 0.3,
+                delay: index * 0.1,
+                ease: 'easeInOut',
+              }}
+              className="mr-2 inline-block"
             >
-              on-demand high-quality datasets for your AI models
+              {word}
             </motion.span>
+          ))}
           </div>
         {/* <h1 className="relative z-10 mx-auto max-w-4xl text-center font-bold text-slate-700 dark:text-slate-300">
   
