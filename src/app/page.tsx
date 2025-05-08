@@ -3,6 +3,7 @@ import Benefits from "../components/Benefits";
 import { Timeline } from "../components/Timeline";
 import { DATA } from "@/components/ExploreContent";
 import World from "@/components/World";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -52,6 +53,7 @@ export default function Home() {
           },
         ]}
       />
+      <Footer />
     </main>
   );
 }
