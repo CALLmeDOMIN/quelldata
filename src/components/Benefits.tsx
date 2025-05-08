@@ -2,8 +2,9 @@ import { CardDemo } from '../components/Card';
 
 const Benefits = () => {
   return (
-    <section className="max-w-7xl flex flex-col gap-8">
-      <h2 className="font-bold text-slate-700 px-4 text-3xl md:text-4xl lg:text-5xl dark:text-slate-300">
+
+    <section className="max-w-7xl flex flex-col gap-16">
+      <h2 className="text-xl font-bold text-slate-700 md:text-2xl lg:text-5xl dark:text-slate-300">
         Discover the Benefits for Your AI Projects
       </h2>
       <div className="flex flex-col gap-2 sm:flex-row w-full items-center justify-center">
