@@ -8,6 +8,11 @@ import { USERS_DATA, BUSINESS_DATA } from "@/components/ExploreContent";
 import World from "@/components/World";
 import Footer from "../components/Footer";
 import UserTypeToggle from "@/components/UserTypeToggle";
+import Faq from "@/components/Faq";
+import {
+  USERS_QUESTIONS_DATA,
+  BUSINESS_QUESTIONS_DATA,
+} from "@/components/Faq";
 
 export default function Home() {
   const [userType, setUserType] = useState<"business" | "user">("business");
@@ -22,6 +27,9 @@ export default function Home() {
       <div className="relative w-full overflow-clip">
         <Timeline data={isUser ? USERS_DATA : BUSINESS_DATA} />
       </div>
+      <Faq
+        questionsData={isUser ? USERS_QUESTIONS_DATA : BUSINESS_QUESTIONS_DATA}
+      />
       <World
         dots={[
           {
