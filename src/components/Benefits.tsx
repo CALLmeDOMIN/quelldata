@@ -1,13 +1,12 @@
-import { CardDemo } from '../components/Card';
+import { CardDemo } from "../components/Card";
 
 const Benefits = () => {
   return (
-
-    <section className="max-w-7xl flex flex-col gap-16">
-      <h2 className="text-xl font-bold text-slate-700 md:text-2xl lg:text-5xl dark:text-slate-300">
+    <section className="p-4 max-w-7xl flex flex-col gap-8 md:gap-16">
+      <h2 className="text-2xl md:text-5xl font-bold text-slate-700  dark:text-slate-300">
         Discover the Benefits for Your AI Projects
       </h2>
-      <div className="flex flex-col gap-2 sm:flex-row w-full items-center justify-center">
+      <div className="flex flex-col gap-4 lg:gap-2 md:flex-row w-full items-center md:justify-center">
         <CardDemo
           title="Gather any data you need"
           description="Define your ideal dataset structure and let the community collect exactly what your model requires."

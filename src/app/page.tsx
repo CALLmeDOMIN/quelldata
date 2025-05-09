@@ -1,23 +1,26 @@
+"use client";
+
+import { useState } from "react";
 import Hero from "../components/Hero";
 import Benefits from "../components/Benefits";
 import { Timeline } from "../components/Timeline";
-import { DATA } from "@/components/ExploreContent";
+import { USERS_DATA, BUSINESS_DATA } from "@/components/ExploreContent";
 import World from "@/components/World";
 import Footer from "../components/Footer";
+import UserTypeToggle from "@/components/UserTypeToggle";
 
 export default function Home() {
+  const [userType, setUserType] = useState<"business" | "user">("business");
+
+  const isUser = userType === "user";
+
   return (
-    <main className="mx-auto my-10 flex max-w-7xl flex-col gap-24">
+    <main className="mx-auto md:my-10 flex max-w-7xl flex-col gap-16 md:gap-24">
       <Hero />
-      <div className="w-full flex justify-center items-center">
-        <button className="relative px-4 py-2 rounded-full bg-gray-200 dark:bg-zinc-800">
-          For businesses
-        </button>
-        <button className="relative px-4 py-2 rounded-full ">For users</button>
-      </div>
-      <Benefits />
+      <UserTypeToggle isUser={isUser} setUserType={setUserType} />
+      {!isUser && <Benefits />}
       <div className="relative w-full overflow-clip">
-        <Timeline data={DATA} />
+        <Timeline data={isUser ? USERS_DATA : BUSINESS_DATA} />
       </div>
       <World
         dots={[
