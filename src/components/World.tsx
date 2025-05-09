@@ -43,12 +43,12 @@ const World = ({ dots = [], lineColor = "#0ea5e9" }: MapProps) => {
   };
 
   return (
-    <div className="flex flex-col gap-16">
-      <div className="w-full flex flex-col gap-8">
-        <h2 className="text-xl font-bold text-slate-700 md:text-2xl lg:text-5xl dark:text-slate-300">
+    <div className="p-4 w-full flex flex-col gap-8 gap-16">
+      <div className="flex flex-col gap-8 flex-wrap">
+        <h2 className="text-2xl md:text-5xl font-bold text-slate-700 md:text-2xl  dark:text-slate-300">
           Your Dataset, Built by the World
         </h2>
-        <p className="w-xl text-xl text-neutral-500 dark:text-neutral-500">
+        <p className="lg:w-xl text-xl text-neutral-500 dark:text-neutral-500">
           From cities to remote villages — our global community helps you gather
           diverse, real-world data at scale, with built-in validation and
           blockchain-based rewards.

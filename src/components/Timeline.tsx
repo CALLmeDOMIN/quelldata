@@ -34,10 +34,10 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   return (
     <div
-      className="w-full bg-white dark:bg-neutral-950 font-sans"
+      className="p-4 w-full bg-white dark:bg-neutral-950 font-sans"
       ref={containerRef}
     >
-      <h2 className="text-xl font-bold text-slate-700 md:text-2xl lg:text-5xl dark:text-slate-300">
+      <h2 className="text-2xl md:text-5xl font-bold text-slate-700  dark:text-slate-300">
         See How Quelldata Works in 3 Simple Steps
       </h2>
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
@@ -45,7 +45,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           <div
             key={index}
             className={`flex justify-start ${
-              index !== 0 ? "pt-10 md:pt-40" : "mt-16"
+              index !== 0 ? "pt-10 md:pt-40" : "mt-8 md:mt-16"
             } md:gap-10`}
           >
             <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-lg md:w-full">

@@ -51,7 +51,7 @@ const IconRenderer = ({
 const Skeleton = ({ iconId }: { iconId: IconIds }) => {
   return (
     <div className="p-8 overflow-hidden h-full relative flex items-center justify-center">
-      <IconRenderer iconId={iconId} size={48} color="currentColor" />
+      <IconRenderer iconId={iconId} size={68} color="currentColor" />
     </div>
   );
 };
@@ -104,7 +104,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "text-sm font-normal text-neutral-600 dark:text-neutral-400 max-w-sm",
+        "text-md font-normal text-neutral-600 dark:text-neutral-400 max-w-sm",
         className
       )}
     >
