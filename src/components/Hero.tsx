@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import Image from "next/image";
 import Navbar from "../components/Navbar";
 
 const Hero = () => {
@@ -17,7 +18,7 @@ const Hero = () => {
         <div className="absolute mx-auto h-px w-40 bg-gradient-to-r from-transparent via-blue-500 to-transparent" />
       </div>
       <div className="p-4">
-        <h1 className="relative z-10 mx-auto max-w-4xl text-center text-2xl font-bold text-slate-700 text-4xl lg:text-7xl dark:text-slate-300">
+        <h1 className="relative z-10 mx-auto max-w-4xl text-center font-bold text-slate-700 text-4xl lg:text-7xl dark:text-slate-300">
           {"Quelldata – on-demand high-quality datasets for your AI models "
             .split(" ")
             .map((word, index) => (
@@ -89,7 +90,7 @@ const Hero = () => {
           className="relative z-10 mt-20 rounded-3xl border border-neutral-200 bg-neutral-100 p-4 shadow-md dark:border-neutral-800 dark:bg-neutral-900"
         >
           <div className="w-full overflow-hidden rounded-xl border border-gray-300 dark:border-gray-700">
-            <img
+            <Image
               src="https://assets.aceternity.com/pro/aceternity-landing.webp"
               alt="Landing page preview"
               className="aspect-[16/9] h-auto w-full object-cover"

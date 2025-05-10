@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import Logo from "../../public/logo-white.png";
 import { IconBrandX, IconBrandTelegram } from "@tabler/icons-react";
 

@@ -5,6 +5,7 @@ import { motion } from "motion/react";
 import DottedMap from "dotted-map";
 
 import { useTheme } from "next-themes";
+import Image from "next/image";
 
 interface MapProps {
   dots?: Array<{
@@ -43,9 +44,9 @@ const World = ({ dots = [], lineColor = "#0ea5e9" }: MapProps) => {
   };
 
   return (
-    <div className="p-4 w-full flex flex-col gap-8 gap-16">
+    <div className="p-4 w-full flex flex-col  gap-16">
       <div className="flex flex-col gap-8 flex-wrap">
-        <h2 className="text-2xl md:text-5xl font-bold text-slate-700 md:text-2xl  dark:text-slate-300">
+        <h2 className="text-2xl md:text-5xl font-bold text-slate-700 dark:text-slate-300">
           Your Dataset, Built by the World
         </h2>
         <p className="lg:w-xl text-xl text-neutral-500 dark:text-neutral-500">
@@ -59,7 +60,7 @@ const World = ({ dots = [], lineColor = "#0ea5e9" }: MapProps) => {
       </div>
 
       <div className="w-full aspect-[2/1] dark:bg-black bg-white rounded-lg  relative font-sans">
-        <img
+        <Image
           src={`data:image/svg+xml;utf8,${encodeURIComponent(svgMap)}`}
           className="h-full w-full [mask-image:linear-gradient(to_bottom,transparent,white_10%,white_90%,transparent)] pointer-events-none select-none"
           alt="world map"
