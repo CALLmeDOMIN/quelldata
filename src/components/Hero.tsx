@@ -1,16 +1,17 @@
 "use client";
-import { useState } from 'react';
+
 import { motion } from "motion/react";
 import Image from "next/image";
 import Navbar from "../components/Navbar";
-import SignUpModal from './SignUpModal';
 
-const Hero = () => {
-  const [isFormOpen, setIsFormOpen] = useState(false);
+type THeroProps = {
+  openForm: () => void;
+};
 
+const Hero = ({ openForm }: THeroProps) => {
   return (
     <section className="relative flex flex-col items-center justify-center">
-      {/* <Navbar /> */}
+      <Navbar />
       <div className="absolute inset-y-0 left-0 h-full w-px bg-neutral-200/80 dark:bg-neutral-800/80">
         <div className="absolute top-0 h-40 w-px bg-gradient-to-b from-transparent via-blue-500 to-transparent" />
       </div>
@@ -54,8 +55,8 @@ const Hero = () => {
           }}
           className="relative z-10 mx-auto max-w-xl py-4 text-center text-lg font-normal text-neutral-600 dark:text-neutral-400"
         >
-          Get custom datasets sourced by a global community and validated with transparency. Faster, cheaper, and
-          tailored to your model’s needs.
+          Get custom datasets sourced by a global community and validated with
+          transparency. Faster, cheaper, and tailored to your model’s needs.
         </motion.p>
         <motion.div
           initial={{
@@ -72,7 +73,7 @@ const Hero = () => {
         >
           <button
             className="w-60 transform rounded-lg bg-black px-6 py-2 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 cursor-pointer"
-            onClick={() => setIsFormOpen(true)}
+            onClick={openForm}
           >
             Join the Whitelist
           </button>
@@ -81,7 +82,6 @@ const Hero = () => {
             See Whitepaper
           </button>
         </motion.div>
-        <SignUpModal isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
         <motion.div
           initial={{
             opacity: 0,
