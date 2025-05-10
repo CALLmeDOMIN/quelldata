@@ -36,9 +36,9 @@ export default function SignUpModal({ isOpen, onClose }: { isOpen: boolean; onCl
               {/* Close button */}
               <button
                 onClick={onClose}
-                className="absolute right-4 top-4 text-neutral-500 hover:text-neutral-900 dark:hover:text-white"
+                className="absolute right-6 top-6 md:right-8 md:top-8 text-neutral-500 hover:text-neutral-900 dark:hover:text-white"
               >
-                <X className="h-5 w-5" />
+                <X className="h-5 w-5 cursor-pointer" />
               </button>
 
               {/* Header */}
