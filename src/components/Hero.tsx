@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { motion } from 'motion/react';
-import Navbar from '../components/Navbar';
+// import Navbar from '../components/Navbar';
 import SignUpModal from './SignUpModal';
 const Hero = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
