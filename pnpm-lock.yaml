@@ -33,7 +33,7 @@ importers:
         specifier: ^0.508.0
         version: 0.508.0(react@19.1.0)
       motion:
-        specifier: ^12.10.0
+        specifier: ^12.0.0-alpha.2
         version: 12.10.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       next:
         specifier: 15.3.1
@@ -1752,8 +1752,8 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
 
-  proj4@2.16.1:
-    resolution: {integrity: sha512-98UA7U4DT0Ao2yo4S4A/hgUoIokxq4RDKtQh3rQBRemk6rc0pTn3ofECnxMq9UsvEvG5xxvlAdTz4JWeGXY3kA==}
+  proj4@2.16.2:
+    resolution: {integrity: sha512-1IcYz7wG1kDpPEJSeBy+0v29wW3mhbqUgRReenvhjgHlGjFA9cA72nGWnikUUS/ggq3y/TcShWzR41sikFSrlQ==}
 
   prop-types@15.8.1:
     resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}
@@ -2885,7 +2885,8 @@ snapshots:
   dotted-map@2.2.3:
     dependencies:
       '@turf/boolean-point-in-polygon': 6.5.0
-      proj4: 2.16.1
+
+      proj4: 2.16.2
 
   dunder-proto@1.0.1:
     dependencies:
@@ -3870,7 +3871,8 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  proj4@2.16.1:
+  proj4@2.16.2:
+  
     dependencies:
       geographiclib-geodesic: 2.1.1
       mgrs: 1.0.0
