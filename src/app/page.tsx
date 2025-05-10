@@ -9,6 +9,7 @@ import World from "@/components/World";
 import Footer from "../components/Footer";
 import UserTypeToggle from "@/components/UserTypeToggle";
 import Faq from "@/components/Faq";
+
 import {
   USERS_QUESTIONS_DATA,
   BUSINESS_QUESTIONS_DATA,
