@@ -1,9 +1,14 @@
 "use client";
-
+import { useState } from "react";
 import { motion } from "motion/react";
 import Navbar from "../components/Navbar";
+import SignupForm from "@/components/SignUpForm";
 
 const Hero = () => {
+  const [ isFormOpened, setIsFormOpened ] = useState(false)
+  function handleFormClick() {
+    setIsFormOpened(isFormOpened=>!isFormOpened);
+  }
   return (
     <section className="relative flex flex-col items-center justify-center">
       <Navbar />
@@ -66,13 +71,16 @@ const Hero = () => {
           }}
           className="relative z-10 mt-8 flex flex-wrap items-center justify-center gap-4"
         >
-          <button className="w-60 transform rounded-lg bg-black px-6 py-2 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 cursor-pointer">
+          <button className="w-60 transform rounded-lg bg-black px-6 py-2 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 cursor-pointer" onClick={handleFormClick}>
             Join the Whitelist
           </button>
+          
           <button className="w-60 transform rounded-lg border border-gray-300 bg-white px-6 py-2 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-100 dark:border-gray-700 dark:bg-black dark:text-white dark:hover:bg-gray-900 cursor-pointer">
             See Whitepaper
           </button>
+          
         </motion.div>
+        {isFormOpened && <SignupForm/>}
         <motion.div
           initial={{
             opacity: 0,
