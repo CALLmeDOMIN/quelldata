@@ -9,7 +9,7 @@ import World from "@/components/World";
 import Footer from "../components/Footer";
 import UserTypeToggle from "@/components/UserTypeToggle";
 import Faq from "@/components/Faq";
-
+import SignUpModal from "../components/SignUpModal";
 import {
   USERS_QUESTIONS_DATA,
   BUSINESS_QUESTIONS_DATA,
@@ -17,12 +17,13 @@ import {
 
 export default function Home() {
   const [userType, setUserType] = useState<"business" | "user">("business");
+  const [isFormOpen, setIsFormOpen] = useState(false);
 
   const isUser = userType === "user";
 
   return (
     <main className="mx-auto md:my-10 flex max-w-7xl flex-col gap-16 md:gap-24">
-      <Hero />
+      <Hero openForm={() => setIsFormOpen(true)} />
       <UserTypeToggle isUser={isUser} setUserType={setUserType} />
       {!isUser && <Benefits />}
       <div className="relative w-full overflow-clip">
@@ -66,6 +67,7 @@ export default function Home() {
         ]}
       />
       <Footer />
+      <SignUpModal isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
     </main>
   );
 }
