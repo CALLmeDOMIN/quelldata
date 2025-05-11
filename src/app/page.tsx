@@ -38,17 +38,12 @@ export default function Home() {
         <Timeline data={timelineData} />
       </div>
       <Faq questionsData={faqData} />
+
       <World
         dots={[
           {
-            start: {
-              lat: 64.2008,
-              lng: -149.4937,
-            },
-            end: {
-              lat: 34.0522,
-              lng: -118.2437,
-            },
+            start: { lat: 64.2008, lng: -149.4937 },
+            end: { lat: 34.0522, lng: -118.2437 },
           },
           {
             start: { lat: 64.2008, lng: -149.4937 },
@@ -72,6 +67,7 @@ export default function Home() {
           },
         ]}
       />
+
       <SignUpModal isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
     </main>
   );
