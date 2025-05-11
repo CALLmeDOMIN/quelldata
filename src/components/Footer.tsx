@@ -1,46 +1,47 @@
 import Image from "next/image";
-import Logo from "../../public/logo-white.png";
+import LogoWhite from "../../public/logo-white.png";
+import LogoBlack from "../../public/quell-logo-black.png";
 import { IconBrandX, IconBrandTelegram } from "@tabler/icons-react";
+import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="w-full p-4 md:p-0 flex flex-wrap items-center justify-between gap-3 md:gap-0">
+    <footer className="mx-auto md:mb-10 max-w-7xl p-4 md:p-0 flex flex-wrap items-center justify-between gap-3 md:gap-0">
       <Image
-        src={Logo}
+        src={LogoWhite}
         alt="quelldata logo"
-        className="h-16 w-auto object-contain"
+        className="dark:block hidden h-16 w-auto object-contain"
+      />
+      <Image
+        src={LogoBlack}
+        alt="quelldata logo"
+        className="block dark:hidden h-16 w-auto object-contain"
       />
 
       <div className="flex-col md:flex-row flex md:items-center md:gap-4">
-        <a
-          href="https://docs.google.com/document/d/1pf0d2hTgcYuyCITyckDe_NVR-GTkHxhxYYSo1o2J1n8/edit?tab=t.0#heading=h.2r5czahnzror"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-sm md:text-base underline"
-        >
+        <Link href="/privacy-policy" className="text-sm md:text-base underline">
           Privacy Policy
-        </a>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
+        </Link>
+        <Link
+          href="/terms-conditions"
           className="text-sm md:text-base underline"
         >
           Terms & Conditions
-        </a>
+        </Link>
       </div>
 
       <div className="flex items-center gap-4">
         <a
-          href="https://x.com/yourprofile"
+          href="https://x.com/Quelldata_io"
           target="_blank"
           rel="noopener noreferrer"
         >
           <IconBrandX />
         </a>
         <a
-          href="https://t.me/yourchannel"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="#"
+          // target="_blank"
+          // rel="noopener noreferrer"
         >
           <IconBrandTelegram />
         </a>
