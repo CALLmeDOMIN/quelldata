@@ -66,7 +66,6 @@ export default function Home() {
           },
         ]}
       />
-      <Footer />
       <SignUpModal isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
     </main>
   );

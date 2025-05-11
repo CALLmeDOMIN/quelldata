@@ -1,18 +1,34 @@
-import Image from "next/image";
-import Logo from "../../public/logo-white.png";
+"use client";
+
 import { useState } from "react";
+import Image from "next/image";
+import LogoWhite from "../../public/logo-white.png";
+import LogoBlack from "../../public/quell-logo-black.png";
 import { IconMenu2, IconX } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const Navbar = () => {
+type TNavbarProps = {
+  inHero?: boolean;
+};
+
+const Navbar = ({ inHero = false }: TNavbarProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="relative z-50 flex w-full items-center justify-between border-t border-b border-neutral-200 px-4 py-4 dark:border-neutral-800">
+    <nav
+      className={`relative z-50 flex w-full items-center justify-between ${
+        inHero && "border-t"
+      } border-b border-neutral-200 px-4 py-4 dark:border-neutral-800`}
+    >
       <Image
-        src={Logo}
+        src={LogoWhite}
         alt="quelldata logo"
-        className="h-12 md:h-16 w-auto object-contain"
+        className="dark:block hidden h-12 md:h-16 w-auto object-contain"
+      />
+      <Image
+        src={LogoBlack}
+        alt="quelldata logo"
+        className="block dark:hidden  h-12 md:h-16 w-auto object-contain"
       />
 
       <button
