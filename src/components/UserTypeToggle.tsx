@@ -10,10 +10,10 @@ export default function UserTypeToggle({
   setUserType,
 }: TUserTypeToggleProps) {
   return (
-    <div className="mx-auto w-fit flex justify-center items-center gap-2 bg-gray-200 dark:bg-zinc-800 rounded-full">
+    <div className="mx-auto w-fit flex justify-center items-center gap-2 bg-zinc-800 rounded-full">
       <button
         onClick={() => setUserType("business")}
-        className={`text-medium md:text-lg px-4 py-2 rounded-full dark:text-white cursor-pointer transition-colors duration-300 ${
+        className={`text-medium md:text-lg px-4 py-2 rounded-full text-white cursor-pointer transition-colors duration-300 ${
           !isUser ? "bg-zinc-700" : ""
         }`}
       >
@@ -22,7 +22,7 @@ export default function UserTypeToggle({
 
       <button
         onClick={() => setUserType("user")}
-        className={`text-medium md:text-lg px-4 py-2 rounded-full dark:text-white cursor-pointer transition-colors duration-300 ${
+        className={`text-medium md:text-lg px-4 py-2 rounded-full text-white cursor-pointer transition-colors duration-300 ${
           isUser ? "bg-zinc-700" : ""
         }`}
       >

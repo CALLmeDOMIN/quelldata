@@ -40,6 +40,7 @@ export default function Home() {
       <Faq questionsData={faqData} />
 
       <World
+        openForm={() => setIsFormOpen(true)}
         dots={[
           {
             start: { lat: 64.2008, lng: -149.4937 },

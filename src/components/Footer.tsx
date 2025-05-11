@@ -1,7 +1,6 @@
 import { memo } from "react";
 import Image from "next/image";
 import LogoWhite from "../../public/logo-white.png";
-import LogoBlack from "../../public/quell-logo-black.png";
 import { IconBrandX, IconBrandTelegram } from "@tabler/icons-react";
 import Link from "next/link";
 
@@ -12,13 +11,7 @@ const Footer = () => {
         <Image
           src={LogoWhite}
           alt="quelldata logo"
-          className="dark:block hidden h-16 w-auto object-contain"
-          priority={true}
-        />
-        <Image
-          src={LogoBlack}
-          alt="quelldata logo"
-          className="block dark:hidden h-16 w-auto object-contain"
+          className="h-16 w-auto object-contain"
         />
       </Link>
 

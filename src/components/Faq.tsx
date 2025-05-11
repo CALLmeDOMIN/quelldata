@@ -22,7 +22,7 @@ const Faq = ({ questionsData }: TFaqProps) => {
 
   return (
     <section className="p-4 max-w-7xl flex flex-col gap-8 md:gap-16">
-      <h2 className="text-2xl md:text-5xl font-bold text-slate-700 dark:text-slate-300">
+      <h2 className="text-2xl md:text-5xl font-bold text-slate-300">
         Frequently asked questions
       </h2>
       <ul className="w-full flex flex-col gap-2 border-b-2 border-b-neutral-200/80 dark:border-b-neutral-800/80">

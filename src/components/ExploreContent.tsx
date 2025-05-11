@@ -16,9 +16,7 @@ type TDataContentProps = {
 
 const DataContent = ({ description, imageSources }: TDataContentProps) => (
   <div className="flex flex-col gap-10">
-    <p className="text-xl text-neutral-500 dark:text-neutral-500 ">
-      {description}
-    </p>
+    <p className="text-xl text-neutral-500 ">{description}</p>
     <div className="overflow-x-auto flex gap-6">
       {imageSources.map((image, index) => (
         <Image
