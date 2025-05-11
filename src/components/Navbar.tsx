@@ -3,7 +3,6 @@
 import { useState, memo } from "react";
 import Image from "next/image";
 import LogoWhite from "../../public/logo-white.png";
-import LogoBlack from "../../public/quell-logo-black.png";
 import { IconMenu2, IconX } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
