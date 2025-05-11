@@ -1,8 +1,7 @@
 "use client";
 
-import { memo } from "react";
 import { motion } from "motion/react";
-import Image from "next/image";
+import { memo } from "react";
 import Navbar from "../components/Navbar";
 
 type THeroProps = {
