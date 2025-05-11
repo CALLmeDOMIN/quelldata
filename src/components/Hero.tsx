@@ -22,15 +22,23 @@ const Hero = ({ openForm }: THeroProps) => {
       <div className="absolute inset-x-0 bottom-0 h-px w-full bg-neutral-800/80">
         <div className="absolute mx-auto h-px w-40 bg-gradient-to-r from-transparent via-blue-500 to-transparent" />
       </div>
-      <div className="p-4">
+      <div className="p-12">
         <h1 className="relative z-10 mx-auto max-w-4xl text-center font-bold text-4xl lg:text-7xl text-slate-300">
           {"Quelldata – on-demand high-quality datasets for your AI models "
             .split(" ")
             .map((word, index) => (
               <motion.span
                 key={index}
-                initial={{ opacity: 0, filter: "blur(4px)", y: 10 }}
-                animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+                initial={{
+                  opacity: 0,
+                  filter: "blur(4px)",
+                  y: 10,
+                }}
+                animate={{
+                  opacity: 1,
+                  filter: "blur(0px)",
+                  y: 0,
+                }}
                 transition={{
                   duration: 0.3,
                   delay: index * 0.1,
@@ -84,7 +92,7 @@ const Hero = ({ openForm }: THeroProps) => {
             </button>
           </a>
         </motion.div>
-        <motion.div
+        {/* <motion.div
           initial={{
             opacity: 0,
             y: 10,
@@ -108,7 +116,7 @@ const Hero = ({ openForm }: THeroProps) => {
               width={1000}
             />
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
