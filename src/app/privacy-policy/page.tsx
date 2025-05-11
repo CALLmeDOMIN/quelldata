@@ -5,7 +5,7 @@ export default function PrivacyPolicy() {
     <main className="mx-auto md:my-10 flex max-w-7xl flex-col">
       <Navbar />
       <h1 className="my-8 mb-8 text-2xl md:text-5xl font-bold text-slate-700  dark:text-slate-300">
-        Terms & Conditions
+        Privacy Policy
       </h1>
       <section className="space-y-6 text-neutral-600 dark:text-neutral-400">
         <p>
