@@ -35,7 +35,7 @@ export default function SignUpModal({
 
     const validationResult = schema.safeParse({ company, email });
     if (!validationResult.success) {
-      const fieldErrors: any = {};
+      const fieldErrors: Record<string, string> = {};
       for (const issue of validationResult.error.issues) {
         fieldErrors[issue.path[0]] = issue.message;
       }

@@ -44,10 +44,12 @@ export default function PrivacyPolicy() {
           </h2>
           <ul className="list-disc ml-6 space-y-1">
             <li>
-              Voluntarily entered by users in forms, stored in the operator’s
-              system
+              Voluntarily entered by users in forms, stored in the
+              operator&apos;s system
             </li>
-            <li>Cookies (small data files) saved on the user's devices</li>
+            <li>
+              Cookies (small data files) saved on the user`&apos;s devices
+            </li>
           </ul>
         </div>
 

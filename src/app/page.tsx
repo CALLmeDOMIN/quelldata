@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useRef } from "react";
+import { useState, useMemo } from "react";
 import Hero from "../components/Hero";
 import Benefits from "../components/Benefits";
 import Timeline from "../components/Timeline";
