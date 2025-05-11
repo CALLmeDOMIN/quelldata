@@ -1,12 +1,11 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef } from "react";
 import Hero from "../components/Hero";
 import Benefits from "../components/Benefits";
 import Timeline from "../components/Timeline";
 import { USERS_DATA, BUSINESS_DATA } from "@/components/ExploreContent";
 import World from "@/components/World";
-import Footer from "../components/Footer";
 import UserTypeToggle from "@/components/UserTypeToggle";
 import Faq from "@/components/Faq";
 import SignUpModal from "../components/SignUpModal";

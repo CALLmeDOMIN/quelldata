@@ -13,6 +13,7 @@ const Footer = () => {
           src={LogoWhite}
           alt="quelldata logo"
           className="dark:block hidden h-16 w-auto object-contain"
+          priority={true}
         />
         <Image
           src={LogoBlack}

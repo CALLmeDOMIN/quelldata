@@ -17,7 +17,10 @@ interface MapProps {
 
 const World = ({ dots = [], lineColor = "#0ea5e9" }: MapProps) => {
   const svgRef = useRef<SVGSVGElement>(null);
-  const map = new DottedMap({ height: 100, grid: "diagonal" });
+  const map = useMemo(
+    () => new DottedMap({ height: 100, grid: "diagonal" }),
+    []
+  );
 
   const { theme } = useTheme();
 

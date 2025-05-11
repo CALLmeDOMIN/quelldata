@@ -26,6 +26,7 @@ const Navbar = ({ inHero = false }: TNavbarProps) => {
           src={LogoWhite}
           alt="quelldata logo"
           className="dark:block hidden h-12 md:h-16 w-auto object-contain"
+          priority={true}
         />
         <Image
           src={LogoBlack}
