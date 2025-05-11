@@ -91,16 +91,16 @@ export default function SignUpModal({
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{ duration: 0.2 }}
           >
-            <div className="relative w-full max-w-md  p-6 shadow-lg rounded-xl  bg-[#ededed] dark:bg-[#0a0a0a]">
+            <div className="relative w-full max-w-md  p-6 shadow-lg rounded-xl   bg-[#0a0a0a]">
               {/* Header */}
               <div className="flex justify-between items-center">
-                <h2 className="text-xl font-bold text-neutral-800 dark:text-neutral-200">
+                <h2 className="text-xl font-bold  text-neutral-200">
                   Join the Waitlist
                 </h2>
                 <X className="size-5 cursor-pointer" onClick={onClose} />
               </div>
 
-              <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-300">
+              <p className="mt-2 text-sm text-neutral-300">
                 Be the first to access Quelldata. Get early updates, priority
                 access, and help shape the future of AI data collection.
               </p>
@@ -137,7 +137,7 @@ export default function SignUpModal({
 
                 <button
                   type="submit"
-                  className="w-full transform rounded-lg bg-black px-6 py-2 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 cursor-pointer"
+                  className="w-full transform rounded-lg px-6 py-2 font-medium transition-all duration-300 hover:-translate-y-0.5 bg-white text-black hover:bg-gray-200 cursor-pointer"
                 >
                   {isSubmitting ? "Sending..." : "Join now →"}
                   <BottomGradient />

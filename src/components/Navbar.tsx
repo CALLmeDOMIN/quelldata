@@ -19,26 +19,20 @@ const Navbar = ({ inHero = false }: TNavbarProps) => {
     <nav
       className={`relative z-50 flex w-full items-center justify-between ${
         inHero && "border-t"
-      } border-b border-neutral-200 px-4 py-4 dark:border-neutral-800`}
+      } border-b px-4 py-4 border-neutral-800`}
     >
       <Link href="/">
         <Image
           src={LogoWhite}
           alt="quelldata logo"
-          className="dark:block hidden h-12 md:h-16 w-auto object-contain"
-          priority={true}
-        />
-        <Image
-          src={LogoBlack}
-          alt="quelldata logo"
-          className="block dark:hidden  h-12 md:h-16 w-auto object-contain"
+          className="h-12 md:h-16 w-auto object-contain"
         />
       </Link>
 
       {!inHero && (
         <Link
           href="/"
-          className="hidden md:block text-xl font-medium text-black dark:text-white cursor-pointer"
+          className="hidden md:block text-xl font-medium text-white cursor-pointer"
         >
           Home
         </Link>
@@ -66,7 +60,7 @@ const Navbar = ({ inHero = false }: TNavbarProps) => {
               onClick={() => setIsOpen(false)}
             />
             <motion.div
-              className="fixed top-0 right-0 h-full w-[80%] max-w-sm bg-white dark:bg-zinc-900 shadow-lg z-50 p-6 flex flex-col space-y-4"
+              className="fixed top-0 right-0 h-full w-[80%] max-w-sm bg-zinc-900 shadow-lg z-50 p-6 flex flex-col space-y-4"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
@@ -81,19 +75,19 @@ const Navbar = ({ inHero = false }: TNavbarProps) => {
 
               <Link
                 href="/"
-                className="pl-4 text-xl font-medium text-black dark:text-white cursor-pointer"
+                className="pl-4 text-xl font-medium text-white cursor-pointer"
               >
                 Home
               </Link>
               <Link
                 href="/"
-                className="pl-4 text-xl font-medium text-black dark:text-white cursor-pointer"
+                className="pl-4 text-xl font-medium text-white cursor-pointer"
               >
                 Privacy Policy
               </Link>
               <Link
                 href="/"
-                className="pl-4 text-xl font-medium text-black dark:text-white cursor-pointer"
+                className="pl-4 text-xl font-medium text-white cursor-pointer"
               >
                 Terms & Conditions
               </Link>

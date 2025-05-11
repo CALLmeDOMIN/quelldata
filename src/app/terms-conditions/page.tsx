@@ -6,10 +6,10 @@ export default function TermsConditions() {
       <Navbar />
 
       <div className="p-4">
-        <h1 className="my-4 md:my-8  text-2xl md:text-5xl font-bold text-slate-700  dark:text-slate-300">
+        <h1 className="my-4 md:my-8  text-2xl md:text-5xl font-bold text-slate-300">
           Terms & Conditions
         </h1>
-        <section className="space-y-6 text-neutral-600 dark:text-neutral-400">
+        <section className="space-y-6 text-neutral-400">
           <div className="space-y-2">
             <p>Effective Date: 10.05.2025</p>
             <p>
@@ -24,7 +24,7 @@ export default function TermsConditions() {
           </div>
 
           <div className="space-y-2">
-            <h2 className="text-2xl font-semibold text-slate-700 dark:text-slate-300">
+            <h2 className="text-2xl font-semibold text-slate-300">
               1. Definitions
             </h2>
             <ul className="list-disc ml-6 space-y-1">
@@ -52,7 +52,7 @@ export default function TermsConditions() {
           </div>
 
           <div className="space-y-2">
-            <h2 className="text-2xl font-semibold text-slate-700 dark:text-slate-300">
+            <h2 className="text-2xl font-semibold text-slate-300">
               2. Platform Overview
             </h2>
             <p>
@@ -68,7 +68,7 @@ export default function TermsConditions() {
           </div>
 
           <div className="space-y-2">
-            <h2 className="text-2xl font-semibold text-slate-700 dark:text-slate-300">
+            <h2 className="text-2xl font-semibold text-slate-300">
               3. Eligibility
             </h2>
             <ul className="list-disc ml-6 space-y-1">
@@ -87,7 +87,7 @@ export default function TermsConditions() {
           </div>
 
           <div className="space-y-2">
-            <h2 className="text-2xl font-semibold text-slate-700 dark:text-slate-300">
+            <h2 className="text-2xl font-semibold text-slate-300">
               4. Your Responsibilities
             </h2>
             <ul className="list-disc ml-6 space-y-1">
@@ -108,7 +108,7 @@ export default function TermsConditions() {
           </div>
 
           <div className="space-y-2">
-            <h2 className="text-2xl font-semibold text-slate-700 dark:text-slate-300">
+            <h2 className="text-2xl font-semibold text-slate-300">
               5. Prohibited Conduct
             </h2>
             <ul className="list-disc ml-6 space-y-1">
@@ -128,7 +128,7 @@ export default function TermsConditions() {
           </div>
 
           <div className="space-y-2">
-            <h2 className="text-2xl font-semibold text-slate-700 dark:text-slate-300">
+            <h2 className="text-2xl font-semibold text-slate-300">
               6. Intellectual Property
             </h2>
             <p>
@@ -147,7 +147,7 @@ export default function TermsConditions() {
           </div>
 
           <div className="space-y-2">
-            <h2 className="text-2xl font-semibold text-slate-700 dark:text-slate-300">
+            <h2 className="text-2xl font-semibold text-slate-300">
               7. Rewards and Token Use
             </h2>
             <ul className="list-disc ml-6 space-y-1">
@@ -171,7 +171,7 @@ export default function TermsConditions() {
           </div>
 
           <div className="space-y-2">
-            <h2 className="text-2xl font-semibold text-slate-700 dark:text-slate-300">
+            <h2 className="text-2xl font-semibold text-slate-300">
               8. Reputation System
             </h2>
             <p>
@@ -186,7 +186,7 @@ export default function TermsConditions() {
           </div>
 
           <div className="space-y-2">
-            <h2 className="text-2xl font-semibold text-slate-700 dark:text-slate-300">
+            <h2 className="text-2xl font-semibold text-slate-300">
               9. Third-Party Services
             </h2>
             <p>
@@ -198,7 +198,7 @@ export default function TermsConditions() {
           </div>
 
           <div className="space-y-2">
-            <h2 className="text-2xl font-semibold text-slate-700 dark:text-slate-300">
+            <h2 className="text-2xl font-semibold text-slate-300">
               10. Privacy and Transparency
             </h2>
             <p>
@@ -209,7 +209,7 @@ export default function TermsConditions() {
           </div>
 
           <div className="space-y-2">
-            <h2 className="text-2xl font-semibold text-slate-700 dark:text-slate-300">
+            <h2 className="text-2xl font-semibold text-slate-300">
               11. Disclaimers
             </h2>
             <p>
@@ -221,7 +221,7 @@ export default function TermsConditions() {
           </div>
 
           <div className="space-y-2">
-            <h2 className="text-2xl font-semibold text-slate-700 dark:text-slate-300">
+            <h2 className="text-2xl font-semibold text-slate-300">
               12. Limitation of Liability
             </h2>
             <ul className="list-disc ml-6 space-y-1">
@@ -234,7 +234,7 @@ export default function TermsConditions() {
           </div>
 
           <div className="space-y-2">
-            <h2 className="text-2xl font-semibold text-slate-700 dark:text-slate-300">
+            <h2 className="text-2xl font-semibold text-slate-300">
               13. Account Suspension or Termination
             </h2>
             <p>
@@ -245,7 +245,7 @@ export default function TermsConditions() {
           </div>
 
           <div className="space-y-2">
-            <h2 className="text-2xl font-semibold text-slate-700 dark:text-slate-300">
+            <h2 className="text-2xl font-semibold text-slate-300">
               14. Jurisdiction and Dispute Resolution
             </h2>
             <p>
@@ -257,7 +257,7 @@ export default function TermsConditions() {
           </div>
 
           <div className="space-y-2">
-            <h2 className="text-2xl font-semibold text-slate-700 dark:text-slate-300">
+            <h2 className="text-2xl font-semibold text-slate-300">
               15. Changes to These Terms
             </h2>
             <p>
@@ -268,7 +268,7 @@ export default function TermsConditions() {
           </div>
 
           <div className="space-y-2">
-            <h2 className="text-2xl font-semibold text-slate-700 dark:text-slate-300">
+            <h2 className="text-2xl font-semibold text-slate-300">
               16. Contact
             </h2>
             <p>
