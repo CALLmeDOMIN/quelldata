@@ -4,41 +4,39 @@ export default function PrivacyPolicy() {
   return (
     <main className="mx-auto md:my-10 flex max-w-7xl flex-col">
       <Navbar />
-      <div className="p-4">
-        {" "}
-        <h1 className="my-4 md:my-8  text-2xl md:text-5xl font-bold text-slate-700  dark:text-slate-300">
-          Terms & Conditions
-        </h1>
-        <section className="space-y-6 text-neutral-600 dark:text-neutral-400">
-          <p>
-            This Privacy Policy applies to the website operating under the URL:{" "}
-            <strong>quelldata.com</strong>.
-          </p>
-          <p>
-            The operator of the website and the Data Controller is:
-            <br />
-            <strong>Quelldata</strong>
-            <br />
-            Location: Warsaw, Poland
-            <br />
-            Email:{" "}
-            <a href="mailto:quelldata@gmail.com" className="underline">
-              quelldata@gmail.com
-            </a>
-          </p>
-          <div className="space-y-2">
-            <h2 className="text-2xl font-semibold text-slate-700 dark:text-slate-300 mt-10">
-              1. Purpose of Data Collection
-            </h2>
-            <ul className="list-disc ml-6 space-y-1">
-              <li>Newsletter distribution</li>
-              <li>Displaying user advertisements</li>
-              <li>Handling inquiries via the contact form</li>
-              <li>Service fulfillment</li>
-              <li>Debt collection</li>
-              <li>Presentation of offers or information</li>
-            </ul>
-          </div>
+      <h1 className="my-8 mb-8 text-2xl md:text-5xl font-bold text-slate-700  dark:text-slate-300">
+        Privacy Policy
+      </h1>
+      <section className="space-y-6 text-neutral-600 dark:text-neutral-400">
+        <p>
+          This Privacy Policy applies to the website operating under the URL:{" "}
+          <strong>quelldata.com</strong>.
+        </p>
+        <p>
+          The operator of the website and the Data Controller is:
+          <br />
+          <strong>Quelldata</strong>
+          <br />
+          Location: Warsaw, Poland
+          <br />
+          Email:{" "}
+          <a href="mailto:quelldata@gmail.com" className="underline">
+            quelldata@gmail.com
+          </a>
+        </p>
+        <div className="space-y-2">
+          <h2 className="text-2xl font-semibold text-slate-700 dark:text-slate-300 mt-10">
+            1. Purpose of Data Collection
+          </h2>
+          <ul className="list-disc ml-6 space-y-1">
+            <li>Newsletter distribution</li>
+            <li>Displaying user advertisements</li>
+            <li>Handling inquiries via the contact form</li>
+            <li>Service fulfillment</li>
+            <li>Debt collection</li>
+            <li>Presentation of offers or information</li>
+          </ul>
+        </div>
 
           <div className="space-y-2">
             <h2 className="text-2xl font-semibold text-slate-700 dark:text-slate-300 mt-10">

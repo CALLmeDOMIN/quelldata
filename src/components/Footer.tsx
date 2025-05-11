@@ -43,9 +43,9 @@ const Footer = () => {
           <IconBrandX />
         </a>
         <a
-          href="#"
-          // target="_blank"
-          // rel="noopener noreferrer"
+          href="https://t.me/Quelldata"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <IconBrandTelegram />
         </a>
