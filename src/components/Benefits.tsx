@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { CardDemo } from "../components/Card";
 
 const Benefits = () => {
@@ -27,4 +28,4 @@ const Benefits = () => {
   );
 };
 
-export default Benefits;
+export default memo(Benefits);

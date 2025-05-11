@@ -1,3 +1,4 @@
+import { memo } from "react";
 import Image from "next/image";
 import LogoWhite from "../../public/logo-white.png";
 import LogoBlack from "../../public/quell-logo-black.png";
@@ -7,16 +8,19 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="mx-auto md:mb-10 max-w-7xl p-4 md:p-0 flex flex-wrap items-center justify-between gap-3 md:gap-0">
-      <Image
-        src={LogoWhite}
-        alt="quelldata logo"
-        className="dark:block hidden h-16 w-auto object-contain"
-      />
-      <Image
-        src={LogoBlack}
-        alt="quelldata logo"
-        className="block dark:hidden h-16 w-auto object-contain"
-      />
+      <Link href="/">
+        <Image
+          src={LogoWhite}
+          alt="quelldata logo"
+          className="dark:block hidden h-16 w-auto object-contain"
+          priority={true}
+        />
+        <Image
+          src={LogoBlack}
+          alt="quelldata logo"
+          className="block dark:hidden h-16 w-auto object-contain"
+        />
+      </Link>
 
       <div className="flex-col md:flex-row flex md:items-center md:gap-4">
         <Link href="/privacy-policy" className="text-sm md:text-base underline">
@@ -50,4 +54,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default memo(Footer);

@@ -1,11 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useState, memo } from "react";
 import Image from "next/image";
 import LogoWhite from "../../public/logo-white.png";
 import LogoBlack from "../../public/quell-logo-black.png";
 import { IconMenu2, IconX } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 type TNavbarProps = {
   inHero?: boolean;
@@ -20,16 +21,28 @@ const Navbar = ({ inHero = false }: TNavbarProps) => {
         inHero && "border-t"
       } border-b border-neutral-200 px-4 py-4 dark:border-neutral-800`}
     >
-      <Image
-        src={LogoWhite}
-        alt="quelldata logo"
-        className="dark:block hidden h-12 md:h-16 w-auto object-contain"
-      />
-      <Image
-        src={LogoBlack}
-        alt="quelldata logo"
-        className="block dark:hidden  h-12 md:h-16 w-auto object-contain"
-      />
+      <Link href="/">
+        <Image
+          src={LogoWhite}
+          alt="quelldata logo"
+          className="dark:block hidden h-12 md:h-16 w-auto object-contain"
+          priority={true}
+        />
+        <Image
+          src={LogoBlack}
+          alt="quelldata logo"
+          className="block dark:hidden  h-12 md:h-16 w-auto object-contain"
+        />
+      </Link>
+
+      {!inHero && (
+        <Link
+          href="/"
+          className="hidden md:block text-xl font-medium text-black dark:text-white cursor-pointer"
+        >
+          Home
+        </Link>
+      )}
 
       <button
         className="md:hidden z-50"
@@ -66,19 +79,24 @@ const Navbar = ({ inHero = false }: TNavbarProps) => {
                 </button>
               </div>
 
-              <div className="flex flex-col space-y-2">
-                <button className="px-4 text-left">
-                  <span className="text-xl font-medium text-black dark:text-white cursor-pointer">
-                    For businesses
-                  </span>
-                </button>
-
-                <button className="px-4 text-left">
-                  <span className="text-xl font-medium text-black dark:text-white cursor-pointer">
-                    For users
-                  </span>
-                </button>
-              </div>
+              <Link
+                href="/"
+                className="pl-4 text-xl font-medium text-black dark:text-white cursor-pointer"
+              >
+                Home
+              </Link>
+              <Link
+                href="/"
+                className="pl-4 text-xl font-medium text-black dark:text-white cursor-pointer"
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                href="/"
+                className="pl-4 text-xl font-medium text-black dark:text-white cursor-pointer"
+              >
+                Terms & Conditions
+              </Link>
             </motion.div>
           </>
         )}
@@ -87,4 +105,4 @@ const Navbar = ({ inHero = false }: TNavbarProps) => {
   );
 };
 
-export default Navbar;
+export default memo(Navbar);
