@@ -78,10 +78,15 @@ const Hero = ({ openForm }: THeroProps) => {
           >
             Join the Whitelist
           </button>
-
-          <button className="w-60 transform rounded-lg border px-6 py-2 font-medium transition-all duration-300 hover:-translate-y-0.5  border-gray-700 bg-black text-white hover:bg-gray-900 cursor-pointer">
-            See Whitepaper
-          </button>
+          <a
+            href="https://docs.google.com/document/d/1QJld5HlIrBdCqYjsJu65klqWb5Lwvjj7AUFGCb1uRF4/edit"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="w-60 transform rounded-lg border px-6 py-2 font-medium transition-all duration-300 hover:-translate-y-0.5  border-gray-700 bg-black text-white hover:bg-gray-900 cursor-pointer">
+              See Whitepaper
+            </button>
+          </a>
         </motion.div>
         <motion.div
           initial={{

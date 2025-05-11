@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
-import { ReactScan } from "../components/ReactScan";
+// import { ReactScan } from "../components/ReactScan";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,10 +18,15 @@ export const metadata: Metadata = {
   title: "Quelldata",
   description:
     "Decentralized data platform for AI. Order, validate & earn with crowdsourced, high-quality datasets. On-chain proof-of-quality.",
+
   icons: {
     icon: [
-      { url: "/quell-logo-light.ico", media: "(prefers-color-scheme: light)" },
-      { url: "/quell-logo-dark.ico", media: "(prefers-color-scheme: dark)" },
+      { url: "/favicon.ico" },
+      { url: "/quell-favicon-dark.ico", media: "(prefers-color-scheme: dark)" },
+      {
+        url: "/quell-favicon-light.ico",
+        media: "(prefers-color-scheme: light)",
+      },
     ],
   },
 };
@@ -39,7 +44,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ReactScan />
+        {/* <ReactScan /> */}
         {children}
         <Footer />
       </body>

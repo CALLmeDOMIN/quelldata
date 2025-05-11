@@ -13,9 +13,10 @@ interface MapProps {
     end: { lat: number; lng: number; label?: string };
   }>;
   lineColor?: string;
+  openForm: () => void;
 }
 
-const World = ({ dots = [], lineColor = "#0ea5e9" }: MapProps) => {
+const World = ({ dots = [], lineColor = "#0ea5e9", openForm }: MapProps) => {
   const svgRef = useRef<SVGSVGElement>(null);
   const map = useMemo(
     () => new DottedMap({ height: 100, grid: "diagonal" }),
@@ -61,7 +62,10 @@ const World = ({ dots = [], lineColor = "#0ea5e9" }: MapProps) => {
           diverse, real-world data at scale, with built-in validation and
           blockchain-based rewards.
         </p>
-        <button className="w-60 transform rounded-lg px-6 py-2 font-medium transition-all duration-300 hover:-translate-y-0.5 bg-white text-black hover:bg-gray-200 cursor-pointer">
+        <button
+          onClick={openForm}
+          className="w-60 transform rounded-lg px-6 py-2 font-medium transition-all duration-300 hover:-translate-y-0.5 bg-white text-black hover:bg-gray-200 cursor-pointer"
+        >
           Join the Whitelist
         </button>
       </div>
