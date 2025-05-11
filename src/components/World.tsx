@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, memo, useMemo } from "react";
 import { motion } from "motion/react";
 import DottedMap from "dotted-map";
 
@@ -21,12 +21,14 @@ const World = ({ dots = [], lineColor = "#0ea5e9" }: MapProps) => {
 
   const { theme } = useTheme();
 
-  const svgMap = map.getSVG({
-    radius: 0.22,
-    color: theme === "dark" ? "#FFFFFF40" : "#00000040",
-    shape: "circle",
-    backgroundColor: theme === "dark" ? "black" : "white",
-  });
+  const svgMap = useMemo(() => {
+    return map.getSVG({
+      radius: 0.22,
+      color: theme === "dark" ? "#FFFFFF40" : "#00000040",
+      shape: "circle",
+      backgroundColor: theme === "dark" ? "black" : "white",
+    });
+  }, [theme]);
 
   const projectPoint = (lat: number, lng: number) => {
     const x = (lng + 180) * (800 / 360);
@@ -189,4 +191,4 @@ const World = ({ dots = [], lineColor = "#0ea5e9" }: MapProps) => {
   );
 };
 
-export default World;
+export default memo(World);

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, memo } from "react";
 import { IconChevronDown, IconChevronUp } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -73,7 +73,7 @@ const Faq = ({ questionsData }: TFaqProps) => {
   );
 };
 
-export default Faq;
+export default memo(Faq);
 
 export const BUSINESS_QUESTIONS_DATA = [
   {
