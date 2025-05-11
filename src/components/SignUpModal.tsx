@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import { z } from "zod";
+import { toast } from "sonner";
 
 const schema = z.object({
   companyname: z.string().optional(),
@@ -55,7 +56,7 @@ export default function SignUpModal({
 
       const data = await res.json();
       if (data.success) {
-        alert("Email sent!");
+        toast.success("Email sent!");
         setCompany("");
         setEmail("");
         onClose();
@@ -64,7 +65,7 @@ export default function SignUpModal({
       }
     } catch (err) {
       console.error(err);
-      alert("Error sending email.");
+      toast.error("Sending failed. Try again.");
     } finally {
       setIsSubmitting(false);
     }
