@@ -1,5 +1,6 @@
 "use client";
 
+import { memo } from "react";
 import { motion } from "motion/react";
 import Image from "next/image";
 import Navbar from "../components/Navbar";
@@ -111,4 +112,4 @@ const Hero = ({ openForm }: THeroProps) => {
     </section>
   );
 };
-export default Hero;
+export default memo(Hero);

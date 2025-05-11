@@ -1,12 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo, useRef } from "react";
 import Hero from "../components/Hero";
 import Benefits from "../components/Benefits";
-import { Timeline } from "../components/Timeline";
+import Timeline from "../components/Timeline";
 import { USERS_DATA, BUSINESS_DATA } from "@/components/ExploreContent";
 import World from "@/components/World";
-import Footer from "../components/Footer";
 import UserTypeToggle from "@/components/UserTypeToggle";
 import Faq from "@/components/Faq";
 import SignUpModal from "../components/SignUpModal";
@@ -21,28 +20,30 @@ export default function Home() {
 
   const isUser = userType === "user";
 
+  const timelineData = useMemo(
+    () => (isUser ? USERS_DATA : BUSINESS_DATA),
+    [isUser]
+  );
+  const faqData = useMemo(
+    () => (isUser ? USERS_QUESTIONS_DATA : BUSINESS_QUESTIONS_DATA),
+    [isUser]
+  );
+
   return (
     <main className="mx-auto md:my-10 flex max-w-7xl flex-col gap-16 md:gap-24">
       <Hero openForm={() => setIsFormOpen(true)} />
       <UserTypeToggle isUser={isUser} setUserType={setUserType} />
       {!isUser && <Benefits />}
       <div className="relative w-full overflow-clip">
-        <Timeline data={isUser ? USERS_DATA : BUSINESS_DATA} />
+        <Timeline data={timelineData} />
       </div>
-      <Faq
-        questionsData={isUser ? USERS_QUESTIONS_DATA : BUSINESS_QUESTIONS_DATA}
-      />
+      <Faq questionsData={faqData} />
+
       <World
         dots={[
           {
-            start: {
-              lat: 64.2008,
-              lng: -149.4937,
-            },
-            end: {
-              lat: 34.0522,
-              lng: -118.2437,
-            },
+            start: { lat: 64.2008, lng: -149.4937 },
+            end: { lat: 34.0522, lng: -118.2437 },
           },
           {
             start: { lat: 64.2008, lng: -149.4937 },
@@ -66,6 +67,7 @@ export default function Home() {
           },
         ]}
       />
+
       <SignUpModal isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
     </main>
   );

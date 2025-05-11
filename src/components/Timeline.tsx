@@ -1,18 +1,14 @@
 "use client";
-import {
-  // useMotionValueEvent,
-  useScroll,
-  useTransform,
-  motion,
-} from "motion/react";
-import React, { useEffect, useRef, useState } from "react";
+
+import { useScroll, useTransform, motion } from "motion/react";
+import React, { memo, useEffect, useRef, useState } from "react";
 
 interface TimelineEntry {
   title: string;
   content: React.ReactNode;
 }
 
-export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
+const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
@@ -83,3 +79,5 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     </div>
   );
 };
+
+export default memo(Timeline);
