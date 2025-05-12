@@ -52,7 +52,7 @@ const World = ({ dots = [], lineColor = "#0ea5e9", openForm }: MapProps) => {
   });
 
   return (
-    <div className="flex flex-col  gap-16">
+    <div className="flex flex-col p-4 gap-16">
       <div className="flex flex-col gap-8 flex-wrap">
         <h2 className="text-2xl md:text-5xl font-bold text-slate-300">
           Your Dataset, Built by the World
