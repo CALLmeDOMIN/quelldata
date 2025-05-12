@@ -57,7 +57,7 @@ const World = ({ dots = [], lineColor = '#0ea5e9', openForm }: MapProps) => {
           onClick={openForm}
           className="w-60 transform cursor-pointer rounded-lg bg-white px-6 py-2 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-200"
         >
-          Join the Whitelist
+          Join the Waitlist
         </button>
       </div>
 

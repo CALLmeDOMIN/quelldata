@@ -81,7 +81,7 @@ const Hero = ({ openForm }: THeroProps) => {
             className="w-60 transform cursor-pointer rounded-lg bg-white px-6 py-2 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-200"
             onClick={openForm}
           >
-            Join the Whitelist
+            Join the Waitlist
           </button>
           <a href="/Whitepaper-Quelldata.pdf" download>
             <button className="w-60 transform cursor-pointer rounded-lg border border-gray-700 bg-black px-6 py-2 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-900">
