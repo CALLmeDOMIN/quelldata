@@ -1,4 +1,4 @@
-import { Resend } from "resend";
+import { Resend } from 'resend';
 
 export async function POST(req: Request) {
   const body = await req.json();
@@ -8,9 +8,9 @@ export async function POST(req: Request) {
   try {
     const data = await resend.emails.send({
       from: body.email,
-      to: process.env.WAIT_LIST_EMAIL ?? "",
-      subject: "New waitlist submission",
-      html: `<p><strong>${body.company}</strong> just joined the waitlist with email: ${body.email}</p>`,
+      to: process.env.WAIT_LIST_EMAIL ?? '',
+      subject: 'New waitlist submission',
+      html: `<p><strong>${body.company}</strong> just joined the waitlist with email: ${body.email}</p>`
     });
 
     return Response.json({ success: true, data });

@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { motion } from "motion/react";
-import { memo } from "react";
-import Navbar from "../components/Navbar";
+import { motion } from 'motion/react';
+import { memo } from 'react';
+import Navbar from '../components/Navbar';
 
 type THeroProps = {
   openForm: () => void;
@@ -22,71 +22,69 @@ const Hero = ({ openForm }: THeroProps) => {
         <div className="absolute mx-auto h-px w-40 bg-gradient-to-r from-transparent via-blue-500 to-transparent" />
       </div>
       <div className="p-12">
-        <h1 className="relative z-10 mx-auto max-w-4xl text-center font-bold text-4xl lg:text-7xl text-slate-300">
-          {"Quelldata – on-demand high-quality datasets for your AI models "
-            .split(" ")
-            .map((word, index) => (
-              <motion.span
-                key={index}
-                initial={{
-                  opacity: 0,
-                  filter: "blur(4px)",
-                  y: 10,
-                }}
-                animate={{
-                  opacity: 1,
-                  filter: "blur(0px)",
-                  y: 0,
-                }}
-                transition={{
-                  duration: 0.3,
-                  delay: index * 0.1,
-                  ease: "easeInOut",
-                }}
-                className="mr-2 inline-block"
-              >
-                {word}
-              </motion.span>
-            ))}
+        <h1 className="relative z-10 mx-auto max-w-4xl text-center text-4xl font-bold text-slate-300 lg:text-7xl">
+          {'Quelldata – on-demand high-quality datasets for your AI models '.split(' ').map((word, index) => (
+            <motion.span
+              key={index}
+              initial={{
+                opacity: 0,
+                filter: 'blur(4px)',
+                y: 10
+              }}
+              animate={{
+                opacity: 1,
+                filter: 'blur(0px)',
+                y: 0
+              }}
+              transition={{
+                duration: 0.3,
+                delay: index * 0.1,
+                ease: 'easeInOut'
+              }}
+              className="mr-2 inline-block"
+            >
+              {word}
+            </motion.span>
+          ))}
         </h1>
 
         <motion.p
           initial={{
-            opacity: 0,
+            opacity: 0
           }}
           animate={{
-            opacity: 1,
+            opacity: 1
           }}
           transition={{
             duration: 0.3,
-            delay: 0.8,
+            delay: 0.8
           }}
           className="relative z-10 mx-auto max-w-xl py-4 text-center text-lg font-normal text-neutral-400"
         >
-          Get custom datasets sourced by a global community and validated with
-          transparency. Faster, cheaper, and tailored to your model’s needs.
+          Get custom datasets sourced by a global community and validated with transparency. Faster, cheaper, and
+          tailored to your model’s needs.
         </motion.p>
         <motion.div
           initial={{
-            opacity: 0,
+            opacity: 0
           }}
           animate={{
-            opacity: 1,
+            opacity: 1
           }}
           transition={{
             duration: 0.3,
-            delay: 1,
+            delay: 1
           }}
           className="relative z-10 mt-8 flex flex-wrap items-center justify-center gap-4"
         >
           <button
-            className="w-60 transform rounded-lg px-6 py-2 font-medium transition-all duration-300 hover:-translate-y-0.5  bg-white text-black hover:bg-gray-200 cursor-pointer"
+            className="w-60 transform cursor-pointer rounded-lg bg-white px-6 py-2 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-200"
             onClick={openForm}
           >
             Join the Whitelist
           </button>
           <a href="/Whitepaper-Quelldata.pdf" download>
-            <button className="w-60 transform rounded-lg border px-6 py-2 font-medium transition-all duration-300 hover:-translate-y-0.5  border-gray-700 bg-black text-white hover:bg-gray-900 cursor-pointer">
+            <button className="w-60 transform cursor-pointer rounded-lg border border-gray-700 bg-black px-6 py-2 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-900">
               See Whitepaper
             </button>
           </a>
