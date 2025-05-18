@@ -60,10 +60,10 @@ const Navbar = ({ inHero = false }: TNavbarProps) => {
               <Link href="/" className="cursor-pointer pl-4 text-xl font-medium text-white">
                 Home
               </Link>
-              <Link href="/" className="cursor-pointer pl-4 text-xl font-medium text-white">
+              <Link href="/privacy-policy" className="cursor-pointer pl-4 text-xl font-medium text-white">
                 Privacy Policy
               </Link>
-              <Link href="/" className="cursor-pointer pl-4 text-xl font-medium text-white">
+              <Link href="/terms-conditions" className="cursor-pointer pl-4 text-xl font-medium text-white">
                 Terms & Conditions
               </Link>
             </motion.div>

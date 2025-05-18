@@ -2,7 +2,7 @@ import Navbar from '@/components/Navbar';
 
 export default function PrivacyPolicy() {
   return (
-    <main className="mx-auto flex max-w-7xl flex-col md:my-10">
+    <main className="mx-auto flex max-w-7xl p-4 flex-col md:my-10">
       <Navbar />
       <h1 className="my-8 mb-8 text-2xl font-bold text-slate-300 md:text-5xl">Privacy Policy</h1>
       <section className="space-y-6 text-neutral-400">

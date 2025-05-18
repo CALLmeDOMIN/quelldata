@@ -7,8 +7,8 @@ export async function POST(req: Request) {
 
   try {
     const data = await resend.emails.send({
-      from: body.email,
-      to: process.env.WAIT_LIST_EMAIL ?? '',
+      from: process.env.WAIT_LIST_EMAIL ?? '',
+      to: body.email,
       subject: 'New waitlist submission',
       html: `<p><strong>${body.company}</strong> just joined the waitlist with email: ${body.email}</p>`
     });
