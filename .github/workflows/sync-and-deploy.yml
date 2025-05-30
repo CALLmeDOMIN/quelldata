@@ -32,6 +32,15 @@ jobs:
           git checkout main
           git merge upstream/main --no-ff --no-edit
 
+          - name: Remove upstream-specific trigger workflow from fork
+          run: |
+            if [ -f ".github/workflows/trigger-fork-sync.yml" ]; then
+              git rm .github/workflows/trigger-fork-sync.yml
+              git commit -m "Sync from upstream and remove upstream-specific trigger workflow"
+            else
+              echo "Upstream trigger workflow not found, no removal needed."
+            fi
+
       - name: Push Changes to Fork
         run: |
           git push origin main
