@@ -1,14 +1,13 @@
-name: Sync Fork from Upstream
+name: Sync From Upstream and Deploy to Vercel
 
 on:
-  schedule:
-    - cron: '0 0 * * *'
+  repository_dispatch:
+    types: [sync-from-upstream-and-deploy]
   workflow_dispatch:
 
 jobs:
-  sync:
+  sync_and_deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Fork
         uses: actions/checkout@v4
@@ -21,14 +20,14 @@ jobs:
           git config --global user.name "${{ github.actor }}"
           git config --global user.email "${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com"
 
-      - name: Add Upstream Remote
+      - name: Add Upstream Remote (Original Org Repo)
         run: |
           git remote add upstream https://github.com/AGH-team-Red/landing-page.git
 
       - name: Fetch Upstream
         run: git fetch upstream
 
-      - name: Merge Upstream/main into your fork's main branch
+      - name: Merge Upstream/main into fork's main branch
         run: |
           git checkout main
           git merge upstream/main --no-ff --no-edit
@@ -36,3 +35,7 @@ jobs:
       - name: Push Changes to Fork
         run: |
           git push origin main
+
+      - name: Trigger Vercel Deployment
+        run: |
+          curl -X POST "${{ secrets.VERCEL_DEPLOY_HOOK_URL }}"
